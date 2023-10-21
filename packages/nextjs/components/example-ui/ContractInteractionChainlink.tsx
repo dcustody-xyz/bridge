@@ -40,7 +40,7 @@ export const ContractInteractionChainlink = () => {
       setLoading(true);
 
       const result = await walletClient?.writeContract({
-        address: senderAddress,
+        address: ccipAddress,
         abi: erc20Abi,
         functionName: "approve",
         args: [senderAddress, parseUnits(newAmount, tokenDecimals)],
